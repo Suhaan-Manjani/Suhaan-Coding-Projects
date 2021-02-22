@@ -1,27 +1,41 @@
-var people = [
-    "Dad (Anish)","Mom (Salima)","Sister (Zeeana)","Me (Suhaan)"
-  ];var reasons = [
-    "Dad (Anish)",
-    "Mom (Salima)",
-    "Sister (Zeeana)",
-    "Me (Suhaan)"
-  
-  var images = [
-"https://mail.google.com/mail/u/3?ui=2&ik=7c46afe388&attid=0.3&permmsgid=msg-f:1690895813864304905&th=177744c8b193b109&view=fimg&disp=thd&attbid=ANGjdJ-ijbv5jc1jjaye-WItABled-R7mlTWWG75RQpzqZ7PcfOSDmqNRKLO71IXT-coUKbhGbgFl9q2T0PHCb41Gx5LbbKklBZJuP_gkdT8v5wb-knt4UkGgF_Te-g&ats=2524608000000&sz=w1366-h625",
-"https://mail.google.com/mail/u/3?ui=2&ik=7c46afe388&attid=0.5&permmsgid=msg-f:1690895813864304905&th=177744c8b193b109&view=fimg&disp=thd&attbid=ANGjdJ-oNKDagcvXYzST4b8IZjHsu5Aj8uHkj6O6SUHDn0poT-6IhNAYMFHDY5FUXjRooj7egT8uZQYv_ieoKIy27sFtCCMuLCj78eq_s6QJHAahyjZuY19aCjkhxPk&ats=2524608000000&sz=w1366-h625",
-"https://mail.google.com/mail/u/3?ui=2&ik=7c46afe388&attid=0.0&permmsgid=msg-f:1690895813864304905&th=177744c8b193b109&view=fimg&disp=thd&attbid=ANGjdJ9qy7sUyZJ2ImYI8x1doxAEDBnOOsA-ADMjFk-5yEniBE7YuLKCdq_lb_5N_f3yHDt4238pcIzSuRYIRUiNRIZKTkfSQLg-XfaQzTz-jcgmTQ4GwfEyTZiKooU&ats=2524608000000&sz=w1366-h625",
-"https://mail.google.com/mail/u/3?ui=2&ik=7c46afe388&attid=0.2&permmsgid=msg-f:1690895813864304905&th=177744c8b193b109&view=fimg&disp=thd&attbid=ANGjdJ9v9T9qoihun_wAMqW-XXiGj6LUEYeu1wKyzwAFojTDB22qQ0xqdk7hqhdvwBArj9LOT1buAbi6izZizoSptcuH6TtFN1c-lGDnV5xbQCNUglnGnaO9vEnRKdM&ats=2524608000000&sz=w1366-h625"
-  ];
-  
-  var images = [
-"https://mail.google.com/mail/u/3?ui=2&ik=7c46afe388&attid=0.3&permmsgid=msg-f:1690895813864304905&th=177744c8b193b109&view=fimg&disp=thd&attbid=ANGjdJ-ijbv5jc1jjaye-WItABled-R7mlTWWG75RQpzqZ7PcfOSDmqNRKLO71IXT-coUKbhGbgFl9q2T0PHCb41Gx5LbbKklBZJuP_gkdT8v5wb-knt4UkGgF_Te-g&ats=2524608000000&sz=w1366-h625",
-"https://mail.google.com/mail/u/3?ui=2&ik=7c46afe388&attid=0.5&permmsgid=msg-f:1690895813864304905&th=177744c8b193b109&view=fimg&disp=thd&attbid=ANGjdJ-oNKDagcvXYzST4b8IZjHsu5Aj8uHkj6O6SUHDn0poT-6IhNAYMFHDY5FUXjRooj7egT8uZQYv_ieoKIy27sFtCCMuLCj78eq_s6QJHAahyjZuY19aCjkhxPk&ats=2524608000000&sz=w1366-h625",
-"https://mail.google.com/mail/u/3?ui=2&ik=7c46afe388&attid=0.0&permmsgid=msg-f:1690895813864304905&th=177744c8b193b109&view=fimg&disp=thd&attbid=ANGjdJ9qy7sUyZJ2ImYI8x1doxAEDBnOOsA-ADMjFk-5yEniBE7YuLKCdq_lb_5N_f3yHDt4238pcIzSuRYIRUiNRIZKTkfSQLg-XfaQzTz-jcgmTQ4GwfEyTZiKooU&ats=2524608000000&sz=w1366-h625",
-"https://mail.google.com/mail/u/3?ui=2&ik=7c46afe388&attid=0.2&permmsgid=msg-f:1690895813864304905&th=177744c8b193b109&view=fimg&disp=thd&attbid=ANGjdJ9v9T9qoihun_wAMqW-XXiGj6LUEYeu1wKyzwAFojTDB22qQ0xqdk7hqhdvwBArj9LOT1buAbi6izZizoSptcuH6TtFN1c-lGDnV5xbQCNUglnGnaO9vEnRKdM&ats=2524608000000&sz=w1366-h625"
-  ];
+canvas = document.getElementById('myCanvas');
+ctx = canvas.getContext("2d");
 
-  var i = 0;
-  function nextslide() {  document.getElementById("reasontext").innerHTML = reasons[i];
-    document.getElementById("album").src = images[i];
-    i++;
-  }
+car1_width = 120;
+car1_height = 70;
+car1_image = "https://i.postimg.cc/9rqYz9HM/car1.png";
+car1_x = 10;
+car1_y = 10;
+
+car2_width = 120;
+car2_height = 70;
+car2_image = "https://i.postimg.cc/tnnW1Kff/car2.png";
+car2_x = 10;
+car2_y = 100;
+
+background_image = "https://i.postimg.cc/bv5d35nK/racing.jpg";
+
+function add() {
+	background_imgTag = new Image(); //defining a variable with a new image
+	background_imgTag.onload = uploadBackground; // setting a function, onloading this variable
+	background_imgTag.src = background_image;   // load image
+
+	car1_imgTag = new Image(); //defining a variable with a new image
+	car1_imgTag.onload = uploadcar1; // setting a function, onloading this variable
+	car1_imgTag.src = car1_image;   // load image
+
+	car2_imgTag = new Image(); //defining a variable with a new image
+	car2_imgTag.onload = uploadcar2; // setting a function, onloading this variable
+	car2_imgTag.src = car2_image;   // load image
+}
+
+function uploadBackground() {
+	ctx.drawImage(background_imgTag, 0, 0, canvas.width, canvas.height);
+}
+
+function uploadcar1() {
+	ctx.drawImage(car1_imgTag, car1_x, car1_y, car1_width, car1_height);
+}
+function uploadcar2() {
+	ctx.drawImage(car2_imgTag, car2_x, car2_y, car2_width, car2_height);
+}

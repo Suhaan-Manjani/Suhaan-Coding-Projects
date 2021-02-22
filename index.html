@@ -1,17 +1,43 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
-<title>My family book</title>
+<style>
+body{
+	background-image: url("https://i.postimg.cc/KzWwHPcq/racing.gif");
+    background-position: center;
+    background-size: cover;
+}
+#myCanvas
+{
+    margin-top: 30px;
+	border-width:10px;
+	background-color: white; 
+	border-style:ridge;
+}
+
+h1,h4
+{
+	color: white !important;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<title>Car Racing</title>
 </head>
-<body>
-  <p id="firstp">My Family</p>
-  <p>
-    <p>
-<img id="album" src="IMG_2238.jpg">
- <div>
-        <button type="button" onclick="nextslide()"> Next </button>
- </div>
- <p id="reasontext">"My Family"</p>
+<body onload="add();">
+
+<center>
+<h1>Car Racing</h1>
+<h1>Game Status : <span id="game_status"></span></h1>
+	<canvas id="myCanvas" width="800" height="600">
+	</canvas>
+<h4>
+	<b class="text-danger">NOTE : </b> IF THE CARES ARE NOT VISIABLE PRESS ANY ARROW KEY
+</h4>
+
+</center>
 </body>
 </html>
