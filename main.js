@@ -1,4 +1,3 @@
-
 var canvas = new fabric.Canvas('myCanvas');
 
 player_x = 10;
@@ -12,7 +11,7 @@ var block_image_object= "";
 
 function player_update()
 {
-	fabric.Image.fromURL("player.png", function(Img) {
+	fabric.Image.fromURL("https://i.postimg.cc/zDwfFdYY/player.png", function(Img) {
 	player_object = Img;
 
 	player_object.scaleToWidth(150);
@@ -43,6 +42,7 @@ function new_image(get_image)
 
 }
 
+
 window.addEventListener("keydown", my_keydown);
 
 function my_keydown(e)
@@ -66,6 +66,33 @@ if(e.shiftKey && keyPressed == '77')
 	document.getElementById("current_height").innerHTML = block_image_height;
 }
 
+	if(keyPressed == '70')
+	{
+		new_image('https://www.sideshow.com/storage/product-images/905767/the-mandalorian-helmet_star-wars_silo.png'); 
+		console.log("f");
+	}
+	if(keyPressed == '66')
+	{
+		new_image('https://i.postimg.cc/FscwL6M0/spiderman-body.png'); 
+		console.log("b");
+	}
+	if(keyPressed == '76')
+	{
+		new_image('https://i.postimg.cc/KzF6GDqt/hulk-legs.png'); 
+		console.log("l");
+	}
+	if(keyPressed == '82')
+	{
+		new_image('https://i.postimg.cc/8s8BGtwS/thor-right-hand.png'); 
+		console.log("r");
+	}
+	if(keyPressed == '72')
+	{
+		new_image('https://i.postimg.cc/rw7ckW29/captain-america-left-hand.png'); 
+		console.log("h");
+	}
+
+
 	if(keyPressed == '38')
 	{
 		up();
@@ -86,53 +113,10 @@ if(e.shiftKey && keyPressed == '77')
 		right();
 		console.log("right");
 	}
-	if(keyPressed == '87')
-	{
-		new_image('wall.jpg'); 
-		console.log("w");
-	}
-	if(keyPressed == '71')
-	{
-		new_image('ground.png'); 
-		console.log("g");
-	}
-	if(keyPressed == '76')
-	{
-		new_image('light_green.png'); 
-		console.log("l");
-	}
-	if(keyPressed == '84')
-	{
-		new_image('trunk.jpg'); 
-		console.log("t");
-	}
-	if(keyPressed == '82')
-	{
-		new_image('roof.jpg'); 
-		console.log("r");
-	}
-	if(keyPressed == '89')
-	{
-		new_image('yellow_wall.png'); 
-		console.log("y");
-	}
-	if(keyPressed == '68')
-	{
-		new_image('dark_green.png'); 
-		console.log("d");
-	}
-	if(keyPressed == '85')
-	{
-		new_image('unique.png'); 
-		console.log("u");
-	}
-	if(keyPressed == '67')
-	{
-		new_image('cloud.jpg'); 
-		console.log("c");
-	}
 	
 }
+
+
 function up()
 {
 	if(player_y >=0)
